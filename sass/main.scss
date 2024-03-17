@@ -41,6 +41,43 @@ a {
     color: #FFFFFF;
 }
 
+/****** Heart checkbox ***********/
+.heart-checkbox {
+
+    & input[type="checkbox"] {
+        display: none;
+    }
+    & .checked {
+        display: none;
+        background: linear-gradient($colour-primary, $colour-secondary);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-text-fill-color: transparent;
+    }
+
+    & input[type="checkbox"]:checked {
+        & ~ .checked {
+            display: inline-block;
+        }
+        & ~ .unchecked {
+            display: none;
+        }
+    }
+}
+
+.heart-active {
+    opacity: 0;
+    background: linear-gradient($colour-primary, $colour-secondary);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+
+    &:hover {
+        opacity: 1;
+    }
+}
 
 /****** Main page ***********/
 
@@ -172,6 +209,41 @@ a {
     }
 }
 
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 13px;
+    padding-right: 20px;
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+
+        & h3 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        & p {
+            font-size: 17px;
+            font-weight: 300;
+        }
+    }
+
+    &__heart {
+        position: relative;
+        width: 30px;
+        height: 21px;
+        font-size: 21px;
+
+        & i {
+            position: absolute;
+        }
+    }
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 

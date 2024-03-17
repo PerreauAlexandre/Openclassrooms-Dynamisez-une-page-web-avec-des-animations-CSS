@@ -37,6 +37,37 @@ a {
   color: #FFFFFF;
 }
 
+/****** Heart checkbox ***********/
+.heart-checkbox input[type=checkbox] {
+  display: none;
+}
+.heart-checkbox .checked {
+  display: none;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+.heart-checkbox input[type=checkbox]:checked ~ .checked {
+  display: inline-block;
+}
+.heart-checkbox input[type=checkbox]:checked ~ .unchecked {
+  display: none;
+}
+
+.heart-active {
+  opacity: 0;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+.heart-active:hover {
+  opacity: 1;
+}
+
 /****** Main page ***********/
 /****** Header ***********/
 .header {
@@ -155,6 +186,37 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 13px;
+  padding-right: 20px;
+}
+.card-content__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.card-content__text h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+.card-content__text p {
+  font-size: 17px;
+  font-weight: 300;
+}
+.card-content__heart {
+  position: relative;
+  width: 30px;
+  height: 21px;
+  font-size: 21px;
+}
+.card-content__heart i {
+  position: absolute;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
