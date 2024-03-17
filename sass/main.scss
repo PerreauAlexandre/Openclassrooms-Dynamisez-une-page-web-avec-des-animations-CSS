@@ -1,0 +1,185 @@
+/****** Variables ***********/
+$colour-primary: #9356DC;
+$colour-secondary: #FF79DA;
+$colour-tertiary: #99E2D0;
+$colour-background: #F6F6F6;
+
+/****** General ***********/
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/****** Button ***********/
+.button {
+    border: none;
+    height: 50px;
+    border-radius: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: linear-gradient($colour-secondary, $colour-primary);
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+
+/****** Main page ***********/
+
+/****** Header ***********/
+.header {
+    height: 63px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/****** Location ***********/
+
+.location-section {
+    background-color: #EAEAEA;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+/****** Presentation ***********/
+.presentation-section {
+    background-color: $colour-background;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    padding: 40px 30px;
+
+    & p {
+        font-size: 18px;
+        font-weight: 300;
+    }
+}
+
+/****** Functioning ***********/
+
+.functioning-section {
+    padding: 50px 20px;
+}
+
+.functioning {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.step {
+    background-color: $colour-background;
+    border-radius: 20px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+
+    &__number {
+        width: 24px;
+        height: 24px;
+        color: #FFFFFF;
+        background-color: $colour-primary;
+        border-radius: 50%;
+        position: relative;
+        left: -12px;
+        font-size: 14px;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__logo {
+        margin: 0 20px;
+        font-size: 18px;
+
+        &--purple {
+            color: $colour-primary;
+        }
+    }
+}
+
+/****** Restaurant ***********/
+.restaurant {
+    background-color: $colour-background;
+    padding: 50px 17px;
+}
+
+.restaurant-cards {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.card {
+    position: relative;
+    display: block;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    overflow: hidden;
+
+    &__image {
+        height: 180px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__content {
+        height: 70px;
+    }
+
+    &__new {
+        position: absolute;
+        top: 13px;
+        right: 13px;
+        width: 80px;
+        height: 29px;
+        background-color: $colour-tertiary;
+        color: #008766;
+        font-size: 14px;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+/* Le code ci-dessous correspond à la version responsive uniquement */
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktop) */
+@media (min-width: 1024px) {
+}
