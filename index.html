@@ -87,10 +87,11 @@
                             <h3>À la française</h3>
                             <p>Cité Rouge</p>
                         </div>
-                        <div class="card-content__heart">
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-solid fa-heart heart-active"></i>
-                        </div>
+                        <label class="card-content__heart heart-checkbox">
+                            <input type="checkbox" />
+                            <i class="fa-regular fa-heart unchecked"></i>
+                            <i class="fa-solid fa-heart checked"></i>
+                        </label>
                     </div>
                 </a>
                 <a href="#" class="card">
@@ -100,19 +101,20 @@
                             <h3>Le délice des sens</h3>
                             <p>Folie-Méricourt</p>
                         </div>
-                        <div class="card-content__heart">
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-solid fa-heart heart-active"></i>
-                        </div>
+                        <label class="card-content__heart heart-checkbox">
+                            <input type="checkbox" />
+                            <i class="fa-regular fa-heart unchecked"></i>
+                            <i class="fa-solid fa-heart checked"></i>
+                        </label>
                     </div>
                 </a>
             </div>
         </section>
     </main>
-    <footer>
-        <nav>
-            <img src="./public/images/logo/ohmyfood@2x.svg" alt="Logo ohmyfood"/>
-            <ul>
+    <footer class="footer">
+        <nav class="footer-nav">
+            <p class="footer-nav__logo">ohmyfood</p>
+            <ul class="footer-nav__list">
                 <li>
                     <a href="#"><i class="fa-solid fa-utensils"></i> Proposer un restaurant</a>
                 </li>
