@@ -271,7 +271,6 @@ a {
     &__logo {
         font-family: 'Shrikhand';
         font-size: 18px;
-        // font-style: italic;
     }
 
     &__list {
@@ -282,18 +281,4 @@ a {
         font-size: 16px;
         font-weight: 500;
     }
-}
-
-
-
-
-/* Le code ci-dessous correspond à la version responsive uniquement */
-
-/****** Media queries ***********/
-/* Medium devices (tablets, less/equal than 1024px) */
-@media (min-width: 768px) {
-}
-
-/* Large devices (desktop) */
-@media (min-width: 1024px) {
 }
