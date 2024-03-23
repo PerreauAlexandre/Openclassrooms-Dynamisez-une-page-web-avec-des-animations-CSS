@@ -1,0 +1,9 @@
+.header {
+    position: relative;
+    z-index: 1;
+    height: 63px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
