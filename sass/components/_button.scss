@@ -9,7 +9,7 @@
     font-weight: 500;
     color: #FFFFFF;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-    overflow: hidden;
+    // overflow: hidden;
 
     &::after {
         content: "";
@@ -18,7 +18,9 @@
         right: 0;
         bottom: 0;  
         left: 0;
-        background: linear-gradient(lighten($colour-secondary, 10), lighten($colour-primary, 10));
+        border-radius: 25px;
+        background: linear-gradient(lighten($colour-secondary, 5), lighten($colour-primary, 5));
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
         opacity: 0;
         z-index: -1;
         transition: opacity 300ms ease-out;

@@ -12,8 +12,7 @@
 .heart-active {
     opacity: 0;
     background: linear-gradient($colour-primary, $colour-secondary);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-text-fill-color: transparent;
     transition: opacity 300ms;
