@@ -1,4 +1,6 @@
 .button {
+    position: relative;
+    z-index: 1;
     border: none;
     height: 50px;
     border-radius: 25px;
@@ -7,6 +9,27 @@
     font-weight: 500;
     color: #FFFFFF;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;  
+        left: 0;
+        background: linear-gradient(lighten($colour-secondary, 10), lighten($colour-primary, 10));
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 300ms ease-out;
+    }
+
+    
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
 
     & a {
         display: flex;
