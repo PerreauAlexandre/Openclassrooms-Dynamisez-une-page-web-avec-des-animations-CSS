@@ -7,3 +7,14 @@
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
+
+.return {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 17px;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+}

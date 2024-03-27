@@ -148,6 +148,17 @@ a {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
+.return {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 17px;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+}
+
 .footer {
   background-color: #353535;
   color: #FFFFFF;
@@ -306,6 +317,20 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.restaurant-img {
+  height: 275px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.main-section {
+  position: relative;
+  top: -55px;
+  margin-bottom: -55px;
+  background-color: #F6F6F6;
+  border-radius: 40px 40px 0 0;
 }
 
 /*# sourceMappingURL=style.css.map */

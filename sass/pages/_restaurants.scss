@@ -1,0 +1,13 @@
+.restaurant-img {
+    height: 275px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.main-section {
+    position: relative;
+    top: -55px;
+    margin-bottom: -55px;
+    background-color: $colour-background;
+    border-radius: 40px 40px 0 0;
+}
