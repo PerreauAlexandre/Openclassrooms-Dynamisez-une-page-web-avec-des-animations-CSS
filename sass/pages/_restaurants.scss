@@ -6,8 +6,117 @@
 
 .main-section {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
     top: -55px;
     margin-bottom: -55px;
     background-color: $colour-background;
     border-radius: 40px 40px 0 0;
+    padding: 32px 13px 40px 13px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    & h1 {
+        font-family: 'Shrikhand';
+        font-size: 28px;
+        font-weight: 400;
+    }
+}
+
+.section-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+
+    &__title {
+        position: relative;
+        height: 27px;
+        font-size: 16px;
+        font-weight: 300;
+        
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 40px;
+            background-color: $colour-tertiary;
+        }
+    }
+
+    &__dish {
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+
+        &:hover > .dish {
+            width: calc(100% - 59px);
+        }
+
+        &:hover > .chosen-dish {
+            transform: translateX(0);
+        }
+    }
+}
+
+.dish {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 15px;
+    background-color: #FFFFFF;
+    width: 100%;
+    transition: width 300ms ease-in-out;
+
+    &__text {
+        max-width: calc(100% - 35px);
+        
+        & h3 {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        & p {
+            font-size: 15px;
+            font-weight: 300;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    &__price {
+        font-size: 15px;
+        font-weight: 700;
+    }
+}
+
+.chosen-dish {
+    // display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 59px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $colour-tertiary;
+    font-size: 20px;
+    color: #FFFFFF;
+    transform: translateX(59px);
+    transition: transform 300ms ease-in-out;
 }
