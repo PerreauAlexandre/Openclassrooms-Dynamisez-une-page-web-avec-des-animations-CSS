@@ -1,0 +1,159 @@
+@keyframes section-appearance {
+    0% { 
+        transform: translateX(-100vw); 
+    }
+    100% { 
+        transform: translateX(0);
+    }
+}
+
+.restaurant-img {
+    height: 275px;
+    width: 100%;
+    object-fit: cover;
+    
+    @media (min-width: 1024px) {
+        height: 383px;
+    }
+}
+
+.main-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    top: -55px;
+    margin-bottom: -55px;
+    background-color: $colour-background;
+    border-radius: 40px 40px 0 0;
+    padding: 32px 13px 40px 13px;
+
+    @media (min-width: 1024px) {
+        max-width: 1055px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    & h1 {
+        font-family: 'Shrikhand';
+        font-size: 28px;
+        font-weight: 400;
+    }
+}
+
+.section-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 634px;
+
+    &__title {
+        position: relative;
+        height: 27px;
+        font-size: 16px;
+        font-weight: 300;
+        
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 40px;
+            background-color: $colour-tertiary;
+        }
+    }
+
+    &__dish {
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+
+        &:hover > .dish {
+            width: calc(100% - 59px);
+        }
+
+        &:hover > .chosen-dish {
+            transform: translateX(0);
+        }
+    }
+
+    @for $i from 2 through 4 {
+
+        &:nth-child(#{$i}) {
+            animation: section-appearance 300ms #{($i - 2) * 550}ms ease-out both;
+
+            & .section-menu__dish {
+
+                @for $j from 2 through 10 {
+
+                    &:nth-child(#{$j}) {
+                        animation: section-appearance 300ms #{($i - 2) * 550 + ($j - 1) * 150}ms ease-out both;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dish {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 14px;
+    background-color: #FFFFFF;
+    width: 100%;
+    transition: width 300ms ease-in-out;
+
+    &__text {
+        max-width: calc(100% - 35px);
+        
+        & h3 {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        & p {
+            font-size: 15px;
+            font-weight: 300;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    &__price {
+        font-size: 15px;
+        font-weight: 700;
+    }
+}
+
+.chosen-dish {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 59px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $colour-tertiary;
+    font-size: 20px;
+    color: #FFFFFF;
+    transform: translateX(59px);
+    transition: transform 300ms ease-in-out;
+}
