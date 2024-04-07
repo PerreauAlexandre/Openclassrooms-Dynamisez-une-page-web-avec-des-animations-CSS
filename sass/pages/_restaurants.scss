@@ -1,3 +1,12 @@
+@keyframes section-appearance {
+    0% { 
+        transform: translateX(-100vw); 
+    }
+    100% { 
+        transform: translateX(0);
+    }
+}
+
 .restaurant-img {
     height: 275px;
     width: 100%;
@@ -57,6 +66,7 @@
         position: relative;
         border-radius: 15px;
         overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
 
         &:hover > .dish {
             width: calc(100% - 59px);
@@ -66,13 +76,30 @@
             transform: translateX(0);
         }
     }
+
+    @for $i from 2 through 4 {
+
+        &:nth-child(#{$i}) {
+            animation: section-appearance 300ms #{($i - 2) * 550}ms ease-out both;
+
+            & .section-menu__dish {
+
+                @for $j from 2 through 10 {
+
+                    &:nth-child(#{$j}) {
+                        animation: section-appearance 300ms #{($i - 2) * 550 + ($j - 1) * 150}ms ease-out both;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .dish {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 15px;
+    padding: 14px;
     background-color: #FFFFFF;
     width: 100%;
     transition: width 300ms ease-in-out;
@@ -105,7 +132,6 @@
 }
 
 .chosen-dish {
-    // display: none;
     position: absolute;
     top: 0;
     bottom: 0;

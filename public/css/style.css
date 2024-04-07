@@ -58,6 +58,10 @@ a {
   padding-left: 20px;
   padding-right: 20px;
 }
+.button--restaurant a {
+  padding-left: 50px;
+  padding-right: 50px;
+}
 
 .heart {
   position: relative;
@@ -319,6 +323,14 @@ a {
   align-items: center;
 }
 
+@keyframes section-appearance {
+  0% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .restaurant-img {
   height: 275px;
   width: 100%;
@@ -375,6 +387,7 @@ a {
   position: relative;
   border-radius: 15px;
   overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 .section-menu__dish:hover > .dish {
   width: calc(100% - 59px);
@@ -382,12 +395,102 @@ a {
 .section-menu__dish:hover > .chosen-dish {
   transform: translateX(0);
 }
+.section-menu:nth-child(2) {
+  animation: section-appearance 300ms 0ms ease-out both;
+}
+.section-menu:nth-child(2) .section-menu__dish:nth-child(2) {
+  animation: section-appearance 300ms 150ms ease-out both;
+}
+.section-menu:nth-child(2) .section-menu__dish:nth-child(3) {
+  animation: section-appearance 300ms 300ms ease-out both;
+}
+.section-menu:nth-child(2) .section-menu__dish:nth-child(4) {
+  animation: section-appearance 300ms 450ms ease-out both;
+}
+.section-menu:nth-child(2) .section-menu__dish:nth-child(5) {
+  animation: section-appearance 300ms 600ms ease-out both;
+}
+.section-menu:nth-child(2) .section-menu__dish:nth-child(6) {
+  animation: section-appearance 300ms 750ms ease-out both;
+}
+.section-menu:nth-child(2) .section-menu__dish:nth-child(7) {
+  animation: section-appearance 300ms 900ms ease-out both;
+}
+.section-menu:nth-child(2) .section-menu__dish:nth-child(8) {
+  animation: section-appearance 300ms 1050ms ease-out both;
+}
+.section-menu:nth-child(2) .section-menu__dish:nth-child(9) {
+  animation: section-appearance 300ms 1200ms ease-out both;
+}
+.section-menu:nth-child(2) .section-menu__dish:nth-child(10) {
+  animation: section-appearance 300ms 1350ms ease-out both;
+}
+.section-menu:nth-child(3) {
+  animation: section-appearance 300ms 550ms ease-out both;
+}
+.section-menu:nth-child(3) .section-menu__dish:nth-child(2) {
+  animation: section-appearance 300ms 700ms ease-out both;
+}
+.section-menu:nth-child(3) .section-menu__dish:nth-child(3) {
+  animation: section-appearance 300ms 850ms ease-out both;
+}
+.section-menu:nth-child(3) .section-menu__dish:nth-child(4) {
+  animation: section-appearance 300ms 1000ms ease-out both;
+}
+.section-menu:nth-child(3) .section-menu__dish:nth-child(5) {
+  animation: section-appearance 300ms 1150ms ease-out both;
+}
+.section-menu:nth-child(3) .section-menu__dish:nth-child(6) {
+  animation: section-appearance 300ms 1300ms ease-out both;
+}
+.section-menu:nth-child(3) .section-menu__dish:nth-child(7) {
+  animation: section-appearance 300ms 1450ms ease-out both;
+}
+.section-menu:nth-child(3) .section-menu__dish:nth-child(8) {
+  animation: section-appearance 300ms 1600ms ease-out both;
+}
+.section-menu:nth-child(3) .section-menu__dish:nth-child(9) {
+  animation: section-appearance 300ms 1750ms ease-out both;
+}
+.section-menu:nth-child(3) .section-menu__dish:nth-child(10) {
+  animation: section-appearance 300ms 1900ms ease-out both;
+}
+.section-menu:nth-child(4) {
+  animation: section-appearance 300ms 1100ms ease-out both;
+}
+.section-menu:nth-child(4) .section-menu__dish:nth-child(2) {
+  animation: section-appearance 300ms 1250ms ease-out both;
+}
+.section-menu:nth-child(4) .section-menu__dish:nth-child(3) {
+  animation: section-appearance 300ms 1400ms ease-out both;
+}
+.section-menu:nth-child(4) .section-menu__dish:nth-child(4) {
+  animation: section-appearance 300ms 1550ms ease-out both;
+}
+.section-menu:nth-child(4) .section-menu__dish:nth-child(5) {
+  animation: section-appearance 300ms 1700ms ease-out both;
+}
+.section-menu:nth-child(4) .section-menu__dish:nth-child(6) {
+  animation: section-appearance 300ms 1850ms ease-out both;
+}
+.section-menu:nth-child(4) .section-menu__dish:nth-child(7) {
+  animation: section-appearance 300ms 2000ms ease-out both;
+}
+.section-menu:nth-child(4) .section-menu__dish:nth-child(8) {
+  animation: section-appearance 300ms 2150ms ease-out both;
+}
+.section-menu:nth-child(4) .section-menu__dish:nth-child(9) {
+  animation: section-appearance 300ms 2300ms ease-out both;
+}
+.section-menu:nth-child(4) .section-menu__dish:nth-child(10) {
+  animation: section-appearance 300ms 2450ms ease-out both;
+}
 
 .dish {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 15px;
+  padding: 14px;
   background-color: #FFFFFF;
   width: 100%;
   transition: width 300ms ease-in-out;
